@@ -2,105 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume | John Muli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Muli | Resume</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans min-h-screen">
+<body class="bg-gradient-to-br from-gray-100 to-blue-50 min-h-screen font-sans text-gray-800">
 
-    <!-- Navigation Bar -->
-<nav class="bg-blue-900 text-white shadow">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="text-2xl font-bold">John Muli</a>
-      <ul class="flex space-x-4 text-sm font-medium">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="resume.html" class="hover:underline">Resume</a></li>
-        <li><a href="projects.html" class="hover:underline">Projects</a></li>
-        <li><a href="labs.html" class="hover:underline">Labs</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <!-- Navbar -->
-  <nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-center gap-6 text-sm sm:text-base">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="resume.html" class="text-blue-700 font-semibold underline">Resume</a>
-      <a href="project1.html" class="hover:underline">Projects</a>
-      <a href="lab1.html" class="hover:underline">Labs</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-700 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html"></a>
+        <ul class="flex space-x-4 text-sm font-medium">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="resume.html" class="hover:underline">Resume</a></li>
+          <li><a href="projects.html" class="hover:underline">Projects</a></li>
+          <li><a href="labs.html" class="hover:underline">Labs</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Main Resume Content -->
-  <main class="max-w-4xl mx-auto px-4 py-10 space-y-10">
-
-    <!-- Summary -->
-    <section>
-      <h2 class="text-xl font-bold border-b-2 border-blue-700 pb-1 mb-2">Professional Summary</h2>
-      <p>I am an ICT professional currently advancing my career in cybersecurity, Linux, and cloud technologies. I hold the KCNA certification and am actively pursuing AWS Cloud Practitioner and Microsoft SC-900. My current role at Malibu Pharmacy involves managing M365, firewalls, networking, and CCTV across 20 branches.</p>
-    </section>
-
-    <!-- Education -->
-    <section>
-      <h2 class="text-xl font-bold border-b-2 border-blue-700 pb-1 mb-2">Education</h2>
-      <ul class="list-disc ml-5">
-        <li>Bachelor’s Degree in Information Technology – [Your University Name]</li>
-        <li>Professional Training: AWS re/Start, Cybershujaa, IBM SkillsBuild, TryHackMe, HackTheBox</li>
-      </ul>
-    </section>
-
-    <!-- Experience -->
-    <section>
-      <h2 class="text-xl font-bold border-b-2 border-blue-700 pb-1 mb-2">Work Experience</h2>
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center space-x-4">
+      <img src="images/profile.jpg" alt="John Muli" class="h-21 w-21 rounded-full border-2 border-white">
       <div>
-        <h3 class="font-semibold">ICT Officer – Malibu Pharmacy</h3>
-        <p class="text-sm text-gray-600">[Start Date] – Present</p>
-        <ul class="list-disc ml-5 mt-1 text-gray-700">
-          <li>Manages M365 email systems, firewall configurations, and VPNs for 20+ branches.</li>
-          <li>Leads IT maintenance for CCTV, local networks, and helpdesk support.</li>
-          <li>Built internal tools for backup automation, inventory tracking, and ISP failover.</li>
-        </ul>
+        <h1 class="text-xxxl font-bold">John Muli</h1>
+        <p class="text-xl text-gray-300">Cybersecurity Enthusiast | Cloud & Network Security</p>
       </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <section class="text-center">
+      <h2 class="text-2xl font-bold mb-4">My Resume</h2>
+      <p class="text-lg mb-6">A snapshot of my education, certifications, experience, and skills as an ICT professional focused on cloud and cybersecurity.</p>
     </section>
 
-    <!-- Certifications -->
-    <section>
-      <h2 class="text-xl font-bold border-b-2 border-blue-700 pb-1 mb-2">Certifications</h2>
-      <ul class="list-disc ml-5">
+    <section class="bg-white py-10 px-6 sm:px-10 lg:px-20 rounded shadow">
+      <h3 class="text-xl font-semibold text-blue-700 mb-4">Education</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Bachelor of Science in Computer Science</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-blue-700 mt-8 mb-4">Certifications</h3>
+      <ul class="list-disc list-inside text-gray-700">
         <li><strong>Kubernetes and Cloud Native Associate (KCNA)</strong></li>
-        <li>SC-900: Microsoft Security, Compliance, and Identity Fundamentals (in progress)</li>
-        <li>AWS Certified Cloud Practitioner (in progress)</li>
-        <li>ISC2 Certified in Cybersecurity – Associate Status</li>
-        <li>IBM SkillsBuild Cybersecurity Program</li>
-        <li>Cybershujaa Cloud and Network Security Training</li>
+        <li><strong>ISC2 Certified in Cybersecurity (CC)</strong> — In Progress</li>
+        <li><strong>AWS Certified Cloud Practitioner</strong> — In Progress</li>
+        <li><strong>Microsoft Security, Compliance, and Identity Fundamentals (SC-900)</strong> — In Progress</li>
+        <li><strong>IBM SkillsBuild Cybersecurity Certificate</strong> — In Progress</li>
+        <li>All badges and certifications are verified at: 
+          <a href="https://www.credly.com/users/john-muli.f829facd" target="_blank" class="text-blue-600 underline hover:text-blue-800">
+            credly.com/users/john-muli.f829facd
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-blue-700 mt-8 mb-4">Work Experience</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>ICT professional with hands-on experience in network administration, Microsoft 365 administration, cybersecurity policy implementation, CCTV system maintenance, and end-user support.</li>
+        <li>Oversight of IT procurement, vendor engagement, and asset lifecycle management across multiple branches.</li>
+        <li>Administration of Microsoft 365 environments including user accounts, policies, and secure collaboration tools.</li>
+        <li>Monitoring systems for security events and system performance in a multi-branch environment.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-blue-700 mt-8 mb-4">Skills</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Cloud Computing (AWS, Kubernetes)</li>
+        <li>Cybersecurity (Blue Teaming, Network Defense, Policy Implementation)</li>
+        <li>Linux System Administration (Ubuntu, Kali Linux)</li>
+        <li>Microsoft 365 Administration (Exchange Online, Teams, OneDrive, Endpoint Security)</li>
+        <li>Network Infrastructure and CCTV Surveillance Systems</li>
+        <li>Technical Writing & Documentation</li>
+        <li>Web Development (HTML, CSS, Tailwind CSS)</li>
+        <li>IT Procurement, Vendor Management, and Asset Lifecycle Oversight</li>
       </ul>
     </section>
-
-    <!-- Skills -->
-    <section>
-      <h2 class="text-xl font-bold border-b-2 border-blue-700 pb-1 mb-2">Technical Skills</h2>
-      <div class="flex flex-wrap gap-3 mt-2 text-sm">
-        <span class="bg-blue-100 px-3 py-1 rounded">Linux</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">Bash</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">MikroTik</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">Microsoft 365</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">Firewall & VPN</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">AWS</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">Git & GitHub</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">SQL</span>
-        <span class="bg-blue-100 px-3 py-1 rounded">Cybersecurity Fundamentals</span>
-      </div>
-    </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 py-6">
     &copy; 2025 John Muli. All rights reserved.
   </footer>
+
 </body>
 </html>

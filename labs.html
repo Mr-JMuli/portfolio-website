@@ -1,79 +1,92 @@
+Here is the code for `labs.html` matching the consistent style you've used on your `index.html` and `resume.html` pages:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Labs | John Muli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Muli | Labs</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800">
-    <!-- Navigation Bar -->
-<nav class="bg-blue-900 text-white shadow">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center py-4">
-      <a href="index.html" class="text-2xl font-bold">John Muli</a>
-      <ul class="flex space-x-4 text-sm font-medium">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="resume.html" class="hover:underline">Resume</a></li>
-        <li><a href="projects.html" class="hover:underline">Projects</a></li>
-        <li><a href="labs.html" class="hover:underline">Labs</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-      </ul>
+<body class="bg-gradient-to-br from-gray-100 to-blue-50 min-h-screen font-sans text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-blue-700 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="index.html"></a>
+        <ul class="flex space-x-4 text-sm font-medium">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="resume.html" class="hover:underline">Resume</a></li>
+          <li><a href="projects.html" class="hover:underline">Projects</a></li>
+          <li><a href="labs.html" class="hover:underline">Labs</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-  <main class="max-w-4xl mx-auto px-6 py-10 space-y-6">
-    
-    <!-- Lab 1 -->
-    <details class="bg-white p-5 rounded-xl shadow-md group" open>
-      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
-        Lab 1: Network Traffic Analysis with Wireshark
-      </summary>
-      <div class="mt-3 space-y-2 text-sm text-gray-700">
-        <p><strong>Problem Statement:</strong> Capture and analyze HTTP and FTP traffic from a simulated network to extract sensitive information.</p>
-        <p><strong>Approach:</strong> Used filters in Wireshark to isolate relevant protocols, followed TCP streams, and extracted plain text credentials.</p>
-        <p><strong>Tools Used:</strong> Wireshark, Kali Linux, VirtualBox</p>
-        <p><strong>Screenshot:</strong></p>
-        <img src="assets/lab1-wireshark.png" alt="Wireshark analysis screenshot" class="rounded-lg border max-w-full">
-        <p><strong>Lessons Learned:</strong> Importance of encryption, use of filters (e.g. `http`, `ftp.request.command`), and how attackers can sniff credentials in unencrypted traffic.</p>
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center space-x-4">
+      <img src="images/profile.jpg" alt="John Muli" class="h-21 w-21 rounded-full border-2 border-white">
+      <div>
+        <h1 class="text-xxxl font-bold">John Muli</h1>
+        <p class="text-xl text-gray-300">Cybersecurity Enthusiast | Cloud & Network Security</p>
       </div>
-    </details>
+    </div>
+  </header>
 
-    <!-- Lab 2 -->
-    <details class="bg-white p-5 rounded-xl shadow-md group">
-      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
-        Lab 2: DNS Query Tracing
-      </summary>
-      <div class="mt-3 space-y-2 text-sm text-gray-700">
-        <p><strong>Problem Statement:</strong> Understand and trace DNS query resolution from client to authoritative DNS server.</p>
-        <p><strong>Approach:</strong> Used `dig`, Wireshark, and DNS debugging tools to observe resolution flow.</p>
-        <p><strong>Tools Used:</strong> dig, Wireshark, nslookup, Kali Linux</p>
-        <p><strong>Screenshot:</strong></p>
-        <img src="assets/lab2-dns.png" alt="DNS resolution screenshot" class="rounded-lg border max-w-full">
-        <p><strong>Lessons Learned:</strong> Role of each DNS server in resolution, how caching works, and how to detect DNS spoofing.</p>
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <section class="text-center">
+      <h2 class="text-2xl font-bold mb-4">Lab Writeups</h2>
+      <p class="text-lg mb-6">Practical cybersecurity and cloud lab challenges I've completed with summaries and key takeaways.</p>
+    </section>
+
+    <section class="bg-white py-10 px-6 sm:px-10 lg:px-20 rounded shadow space-y-6">
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700">📦 Hack The Box Academy – Network Traffic Analysis</h3>
+        <p class="text-gray-700 mt-2">
+          Covered capturing and dissecting packets using Wireshark, analyzing HTTP, DNS, and FTP protocols, and identifying credentials in plaintext sessions.
+        </p>
       </div>
-    </details>
 
-    <!-- Lab 3 -->
-    <details class="bg-white p-5 rounded-xl shadow-md group">
-      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
-        Lab 3: Basic Linux File Permissions
-      </summary>
-      <div class="mt-3 space-y-2 text-sm text-gray-700">
-        <p><strong>Problem Statement:</strong> Set correct file permissions and understand privilege escalation risks in Linux.</p>
-        <p><strong>Approach:</strong> Used `chmod`, `chown`, and permission-based user testing to validate access.</p>
-        <p><strong>Tools Used:</strong> Kali Linux, Bash, ls, chmod, chown</p>
-        <p><strong>Screenshot:</strong></p>
-        <img src="assets/lab3-permissions.png" alt="Linux permissions screenshot" class="rounded-lg border max-w-full">
-        <p><strong>Lessons Learned:</strong> Principle of least privilege, proper access control, and how improper permissions lead to vulnerabilities.</p>
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700">🔍 TryHackMe – DNS in Detail</h3>
+        <p class="text-gray-700 mt-2">
+          Completed in-depth DNS analysis, including DNS zones, record types, and DNS enumeration techniques for red and blue team activities.
+        </p>
       </div>
-    </details>
 
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700">💡 IBM SkillsBuild Cyber Labs</h3>
+        <p class="text-gray-700 mt-2">
+          Completed labs on threat modeling, secure system design, encryption fundamentals, and practical implementation of security controls.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700">🧪 CyberShujaa Blue Team Challenges</h3>
+        <p class="text-gray-700 mt-2">
+          Performed threat detection and log analysis using SIEM tools, firewall configuration, and created response playbooks in simulated environments.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold text-blue-700">🛠 ISC2 Labs – Certified in Cybersecurity</h3>
+        <p class="text-gray-700 mt-2">
+          Engaged in hands-on labs aligned with the ISC2 CC curriculum, focusing on access control, security operations, and incident response.
+        </p>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 py-6">
-    &copy; 2025 John Muli
+    &copy; 2025 John Muli. All rights reserved.
   </footer>
+
 </body>
 </html>

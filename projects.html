@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | John Muli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <header class="bg-green-800 text-white py-6 shadow">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-3xl font-bold">Projects</h1>
+      <p class="text-sm">Click to expand project descriptions and screenshots</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-6">
+
+    <!-- Project 1 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group" open>
+      <summary class="cursor-pointer text-green-800 font-semibold text-lg group-open:underline">
+        Secure File Backup to AWS S3 (Pharmacy Project)
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Description:</strong> Automates secure, versioned file backups from branch PCs to AWS S3 using scheduled scripts and SNS alerts.</p>
+        <p><strong>Tools Used:</strong> AWS CLI, S3, SNS, Python, Bash, Cron</p>
+        <p><strong>Features:</strong> Incremental backup, file type filters, S3 versioning, email alerts on failure.</p>
+        <p><strong>Screenshots:</strong></p>
+        <img src="assets/project1-backup.png" alt="AWS Backup Script Screenshot" class="rounded-lg border max-w-full">
+        <p><strong>GitHub Repo:</strong> <a href="https://github.com/mr-jmuli/aws-backup-project" class="text-blue-600 underline">View on GitHub</a></p>
+      </div>
+    </details>
+
+    <!-- Project 2 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group">
+      <summary class="cursor-pointer text-green-800 font-semibold text-lg group-open:underline">
+        Linux Server Resource Monitor
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Description:</strong> Monitors remote Linux servers, collects resource usage data (CPU, RAM, disk), and sends alerts for high usage.</p>
+        <p><strong>Tools Used:</strong> Bash, SSH, Cron, mailutils</p>
+        <p><strong>Features:</strong> Email alerts, logs, uptime tracking, daily summaries.</p>
+        <p><strong>Screenshots:</strong></p>
+        <img src="assets/project2-monitor.png" alt="Linux Monitor Script" class="rounded-lg border max-w-full">
+        <p><strong>GitHub Repo:</strong> <a href="https://github.com/mr-jmuli/linux-resource-monitor" class="text-blue-600 underline">View on GitHub</a></p>
+      </div>
+    </details>
+
+    <!-- Project 3 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group">
+      <summary class="cursor-pointer text-green-800 font-semibold text-lg group-open:underline">
+        Inventory Management System (Bitrix24-Inspired UI)
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Description:</strong> A web-based inventory tracking and request system for 20 pharmacy branches with admin approval flow.</p>
+        <p><strong>Tools Used:</strong> Django, SQLite, Tailwind CSS, HTML, Git</p>
+        <p><strong>Features:</strong> Role-based authentication, request logs, inventory dashboard, approval workflows.</p>
+        <p><strong>Screenshots:</strong></p>
+        <img src="assets/project3-inventory.png" alt="Inventory Dashboard" class="rounded-lg border max-w-full">
+        <p><strong>GitHub Repo:</strong> <a href="https://github.com/mr-jmuli/inventory-system" class="text-blue-600 underline">View on GitHub</a></p>
+      </div>
+    </details>
+
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 John Muli
+  </footer>
+</body>
+</html>

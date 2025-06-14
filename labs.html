@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labs | John Muli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+  <header class="bg-blue-900 text-white py-6 shadow">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center">Lab Challenges</h1>
+      <p class="text-center text-sm">Click each lab below to expand details</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-6">
+    
+    <!-- Lab 1 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group" open>
+      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
+        Lab 1: Network Traffic Analysis with Wireshark
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Problem Statement:</strong> Capture and analyze HTTP and FTP traffic from a simulated network to extract sensitive information.</p>
+        <p><strong>Approach:</strong> Used filters in Wireshark to isolate relevant protocols, followed TCP streams, and extracted plain text credentials.</p>
+        <p><strong>Tools Used:</strong> Wireshark, Kali Linux, VirtualBox</p>
+        <p><strong>Screenshot:</strong></p>
+        <img src="assets/lab1-wireshark.png" alt="Wireshark analysis screenshot" class="rounded-lg border max-w-full">
+        <p><strong>Lessons Learned:</strong> Importance of encryption, use of filters (e.g. `http`, `ftp.request.command`), and how attackers can sniff credentials in unencrypted traffic.</p>
+      </div>
+    </details>
+
+    <!-- Lab 2 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group">
+      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
+        Lab 2: DNS Query Tracing
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Problem Statement:</strong> Understand and trace DNS query resolution from client to authoritative DNS server.</p>
+        <p><strong>Approach:</strong> Used `dig`, Wireshark, and DNS debugging tools to observe resolution flow.</p>
+        <p><strong>Tools Used:</strong> dig, Wireshark, nslookup, Kali Linux</p>
+        <p><strong>Screenshot:</strong></p>
+        <img src="assets/lab2-dns.png" alt="DNS resolution screenshot" class="rounded-lg border max-w-full">
+        <p><strong>Lessons Learned:</strong> Role of each DNS server in resolution, how caching works, and how to detect DNS spoofing.</p>
+      </div>
+    </details>
+
+    <!-- Lab 3 -->
+    <details class="bg-white p-5 rounded-xl shadow-md group">
+      <summary class="cursor-pointer text-blue-800 font-semibold text-lg group-open:underline">
+        Lab 3: Basic Linux File Permissions
+      </summary>
+      <div class="mt-3 space-y-2 text-sm text-gray-700">
+        <p><strong>Problem Statement:</strong> Set correct file permissions and understand privilege escalation risks in Linux.</p>
+        <p><strong>Approach:</strong> Used `chmod`, `chown`, and permission-based user testing to validate access.</p>
+        <p><strong>Tools Used:</strong> Kali Linux, Bash, ls, chmod, chown</p>
+        <p><strong>Screenshot:</strong></p>
+        <img src="assets/lab3-permissions.png" alt="Linux permissions screenshot" class="rounded-lg border max-w-full">
+        <p><strong>Lessons Learned:</strong> Principle of least privilege, proper access control, and how improper permissions lead to vulnerabilities.</p>
+      </div>
+    </details>
+
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 John Muli
+  </footer>
+</body>
+</html>

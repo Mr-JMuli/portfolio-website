@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f9fa;
+  color: #333;
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+}
+header, nav, main {
+  text-align: center;
+  margin-bottom: 40px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007BFF;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

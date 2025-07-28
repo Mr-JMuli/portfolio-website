@@ -31,10 +31,10 @@ I’m currently expanding my skills in:
 ## 📜 Certifications
 
 - ✅ **Kubernetes and Cloud Native Associate (KCNA)**
-- 🔄 **ISC2 Certified in Cybersecurity (CC)** *(In Progress)*
-- 🔄 **AWS Certified Cloud Practitioner** *(In Progress)*
+- 🔄 **ISC2 Certified in Cybersecurity (CC)** 
+- 🔄 **AWS Certified Cloud Practitioner** 
 - 🔄 **Microsoft Security, Compliance, and Identity Fundamentals (SC-900)** *(In Progress)*
-- 🔄 **IBM SkillsBuild Cybersecurity Certificate** *(In Progress)*
+- 🔄 **IBM SkillsBuild Cybersecurity Certificate** 
 
 🎖️ View all my verified certifications and badges on **[Credly](https://www.credly.com/users/john-muli.f829facd)**.
 
@@ -63,4 +63,4 @@ To become a skilled cybersecurity expert who helps organizations build secure, r
 
 ---
 
-**© 2025 John Muli. All rights reserved.**
+**© 2025 John Muli M. All rights reserved.**

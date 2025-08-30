@@ -1,273 +1,375 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="John Muli's Portfolio - Cybersecurity Enthusiast specializing in Cloud and Network Security">
-  <meta name="keywords" content="John Muli, cybersecurity, cloud security, network security, portfolio">
-  <meta name="author" content="John Muli">
-  <title>John Muli | Cybersecurity Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
+
+
+
+  
+  
+  
+  
+  
+  John Muli | ICT Professional Portfolio
+  
+  
+  
+    :root {
+      --primary-color: #06b6d4; /* Cyan */
+      --accent-color: #8b5cf6; /* Purple */
+      --bg-gradient: linear-gradient(to bottom, #1f2937, #111827);
+      --radial-gradient: radial-gradient(circle at center, #111827 10%, #312e81 40%, #581c87 90%);
+    }
     .smooth-scroll {
       scroll-behavior: smooth;
     }
     .hover-scale {
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .hover-scale:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(134, 211, 243, 0.3);
     }
     .profile-img {
-      width: 200px;
-      height: 200px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #06b6d4;
+      border: 4px solid var(--primary-color);
+      animation: zoomIn 1s ease-out, pulse 2s infinite;
     }
-  </style>
-</head>
-<body class="bg-gray-900 text-white smooth-scroll font-sans">
-  <!-- Navbar -->
-  <nav class="bg-gray-800 sticky top-0 z-10 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-cyan-400">John Muli</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
-        <li><a href="#experience" class="hover:text-cyan-400 transition">Experience</a></li>
-        <li><a href="#certifications" class="hover:text-cyan-400 transition">Certifications</a></li>
-        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
-        <li><a href="#resume" class="hover:text-cyan-400 transition">Resume</a></li>
-        <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    /* Custom radial gradient for hero section */
+    .bg-radial-hero {
+      background: var(--radial-gradient);
+    }
+    /* Fade-in animation for sections */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* Slide-in animation for hero text */
+    .slide-in {
+      opacity: 0;
+      animation: slideIn 1s ease-out forwards;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* Zoom-in animation for profile image */
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    /* Pulse animation */
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(6, 182, 212, 0);
+      }
+    }
+    /* Underline animation for navbar links */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    /* Skill pill */
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      background-color: #374151;
+      border-radius: 9999px;
+      padding: 0.5rem 1rem;
+      margin: 0.25rem;
+      transition: all 0.3s ease;
+    }
+    .skill-pill:hover {
+      background-color: #4b5563;
+      transform: scale(1.05);
+    }
+    .skill-icon {
+      margin-right: 0.5rem;
+      color: var(--primary-color);
+    }
+  
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900">
-    <div class="text-center max-w-3xl mx-auto px-4">
-      <h1 class="text-5xl font-extrabold mb-4 text-cyan-400">John Muli</h1>
-      <p class="text-xl mb-6">Cybersecurity Enthusiast | Cloud & Network Security</p>
-      <p class="text-lg mb-8">Explore my certifications, projects, and journey in building secure, scalable digital solutions.</p>
-      <a href="#resume" class="bg-cyan-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-cyan-400 hover-scale">View My Resume</a>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">About Me</h2>
-      <div class="flex flex-col md:flex-row gap-8 items-center">
-        <div class="md:w-1/3 flex justify-center">
-          <img src="images/profile.jpg" alt="John Muli" class="h-20 w-20 rounded-full border-2 border-white" >
-        </div>
-        <div class="md:w-2/3">
-          <div class="mb-8">
-            <p class="text-lg mb-4">
-              Solutions-oriented ICT professional with over 6 years of experience in network administration, cloud computing (AWS), cybersecurity, and IT support. Proven expertise in optimizing network infrastructure, reducing downtime by 30%, and leading Microsoft 365 migrations with a 90% reduction in email-related issues. Skilled in developing cloud-native solutions, automating backups, and implementing security policies to enhance operational efficiency.
-            </p>
-            <p class="text-lg mb-4">
-              Adept at leveraging Python, Flask, and AWS to build internal tools and ensure data redundancy. Committed to continuous learning, demonstrated through multiple certifications and innovative personal projects.
-            </p>
-            <p class="text-lg">
-              Passionate about cloud computing, Linux, blue team cybersecurity, and modern web technologies, I’m actively expanding my knowledge in cloud infrastructure and data analytics to build innovative, secure digital platforms. My career goal is to become a cybersecurity expert who helps organizations thrive through secure, efficient, and scalable technology solutions.
-            </p>
-          </div>
-          <div class="text-lg">
-            <h3 class="text-xl font-semibold mb-4">Skills</h3>
-            <ul class="list-disc list-inside space-y-2 columns-1 md:columns-2 lg:columns-3">
-              <li>AWS</li>
-              <li>Microsoft 365</li>
-              <li>Sophos</li>
-              <li>Python</li>
-              <li>Flask</li>
-              <li>Linux</li>
-              <li>Helpdesk support</li>
-              <li>CPanel</li>
-              <li>Bash</li>
-              <li>CCTV Systems</li>
-              <li>Git</li>
-              <li>Endpoint security</li>
-              <li>Wireshark</li>
-              <li>Jira Service Management</li>
-              <li>Windows Server</li>
-              <li>System migrations</li>
-              <li>Documentation</li>
-              <li>Policy enforcement</li>
-              <li>Fortinet</li>
-              <li>Terraform</li>
-              <li>pfSense</li>
-              <li>SQL</li>
-              <li>Asset management</li>
-              <li>AWS CLI</li>
-              <li>MikroTik</li>
-              <li>IDS/IPS basics</li>
-              <li>Active Directory</li>
-              <li>EDR</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  
+    
+      John Muli
+      
+        About
+        Experience
+        Certifications
+        Projects
+        Resume
+        Contact
+      
+    
+  
 
-  <!-- Experience Section -->
-  <section id="experience" class="py-16 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">Work Experience</h2>
-      <div class="space-y-8">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Officer - Malibu Pharmacy Ltd</h3>
-          <p class="text-sm text-gray-400 mb-4">May 2023 – Present</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Implemented Jira Service Management, reducing escalation time by 50% for internal IT support.</li>
-            <li>Developed ICT Asset Management System, improving asset tracking efficiency.</li>
-            <li>Implemented ISP failover on MikroTik, reducing downtime by 80%.</li>
-            <li>Upgraded IP CCTV infrastructure, cutting maintenance costs by 40%.</li>
-            <li>Led Microsoft 365 migration, optimizing DNS, access controls, and security.</li>
-            <li>Conducted cybersecurity training, boosting employee awareness.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Lead - Techsavvy Experts Ltd</h3>
-          <p class="text-sm text-gray-400 mb-4">Jul 2023 – Mar 2024</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Created and implemented a digital marketing strategy, increasing engagement by 40%.</li>
-            <li>Developed ICT security policies, reducing vulnerabilities.</li>
-            <li>Integrated Swift Payments API for secure online transactions.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Administrator - Darubini Sacco Society Ltd</h3>
-          <p class="text-sm text-gray-400 mb-4">Jul 2022 – Mar 2023</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Designed and launched company website to improve customer engagement.</li>
-            <li>Implemented office networking and VoIP services.</li>
-            <li>Led branding and marketing material design.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Administrator - FEP Sacco Society Ltd</h3>
-          <p class="text-sm text-gray-400 mb-4">Jul 2019 – May 2022</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Participated in Orbit-R core banking system implementation.</li>
-            <li>Applied network security policies, reducing incidents by 40%.</li>
-            <li>Managed Oracle SQL databases and Windows Server 2012 R2.</li>
-            <li>Designed and maintained network infrastructure.</li>
-            <li>Orbit-R core banking system administration.</li>
-            <li>Suse Linux server Administration.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Intern - KWFT Bank</h3>
-          <p class="text-sm text-gray-400 mb-4">Sep 2018 – Dec 2018</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Provided helpdesk support and performed system/software updates.</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ICT Intern - Kenya Institute of Curriculum Development</h3>
-          <p class="text-sm text-gray-400 mb-4">May 2014 – Aug 2014</p>
-          <ul class="list-disc list-inside space-y-2 text-lg">
-            <li>Provided technical support and installed software.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  
+  
+    
+      John Muli
+      ICT Professional | Cloud Pactitioner | System Administrator | CyberSecurity
+      Turning complex technology into simple, efficient solutions that empower people and organizations
+      View My Resume
+    
+  
 
-  <!-- Certifications Section -->
-  <section id="certifications" class="py-16 bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">Certifications</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">AWS Certified Cloud Practitioner</h3>
-          <p>Amazon Web Services</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">IBM SkillsBuild Cybersecurity Certificate</h3>
-          <p>IBM</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">AI & Machine Learning Foundations</h3>
-          <p>Amazon Web Services & Udacity</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Kubernetes and Cloud Native Associate (KCNA)</h3>
-          <p>Linux Foundation</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">ISC2 Certified in Cybersecurity (CC)</h3>
-          <p>ISC2</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Microsoft SC-900: Security, Compliance & Identity Fundamentals</h3>
-          <p>Microsoft (In-progress)</p>
-        </div>
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Linux Foundation Certified System Administrator</h3>
-          <p>Linux Foundation (In-progress)</p>
-        </div>
-      </div>
-      <p class="text-center mt-8">
-        Verified credentials available on <a href="https://credly.com/users/john-muli.f829facd" class="text-cyan-400 hover:underline" target="_blank">Credly</a>.
-      </p>
-    </div>
-  </section>
+  
+  
+    
+      About Me
+      
+        
+          
+        
+        
+          
+            
+            
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Network Security Monitoring Lab</h3>
-          <p>Built a SIEM using Elastic Stack to monitor network traffic and detect anomalies. Configured firewalls and analyzed logs to identify potential threats.</p>
-          <p class="mt-2"><strong>Technologies:</strong> Elastic Stack, Linux, iptables</p>
-          <a href="#" class="text-cyan-400 hover:underline mt-4 inline-block">View on GitHub</a>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Kubernetes Cluster Deployment</h3>
-          <p>Deployed a secure Kubernetes cluster on AWS, implementing role-based access control (RBAC) and network policies for enhanced security.</p>
-          <p class="mt-2"><strong>Technologies:</strong> Kubernetes, AWS, Docker</p>
-          <a href="#" class="text-cyan-400 hover:underline mt-4 inline-block">View on GitHub</a>
-        </div>
-        <!-- Add more project cards as needed -->
-      </div>
-    </div>
-  </section>
+Hi, I’m John Muli, a solutions-oriented ICT professional with over 6 years of experience in network administration, cloud computing (AWS), cybersecurity, and IT support. I thrive on building technology solutions that improve efficiency, reduce costs, and strengthen business operations.
 
-  <!-- Resume Section -->
-  <section id="resume" class="py-16 bg-gray-800">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8 text-cyan-400">Resume</h2>
-      <p class="text-lg mb-6">Download my full resume to learn more about my experience and qualifications.</p>
-      <a href="JOHN_MULI_CV.pdf" class="bg-cyan-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-cyan-400 hover-scale" target="_blank" download>Download Resume (PDF)</a>
-    </div>
-  </section>
+Throughout my career, I’ve delivered measurable impact, including:
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-900">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-8 text-center text-cyan-400">Contact Me</h2>
-      <div class="max-w-lg mx-auto">
-        <p class="text-lg mb-6 text-center">Interested in collaborating or have a question? Reach out to me!</p>
-        <div class="space-y-4">
-          <p><strong>Email:</strong> <a href="mailto:jmuli866@gmail.com" class="text-cyan-400 hover:underline">jmuli866@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/john-muli-78b8666/" class="text-cyan-400 hover:underline" target="_blank">linkedin.com/in/john-muli</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/mr-jmuli" class="text-cyan-400 hover:underline" target="_blank">github.com/mr-jmuli</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
+Reducing downtime by 30% through proactive network administration and infrastructure optimization.
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 py-6 text-center">
-    <p>&copy; 2025 John Muli. All rights reserved.</p>
-  </footer>
+Cutting email-related issues by 90% by successfully administering and streamlining Microsoft 365.
 
-  <script>
+Designing and deploying cloud-native tools with Python, Flask, and AWS to automate backups, ensure data redundancy, and boost productivity.
+
+I’m passionate about cloud technologies, Linux, cybersecurity, and modern web development. Beyond my professional roles, I continuously learn and work on innovative projects that bridge efficiency, security, and scalability.
+
+My long-term goal is to become an ICT expert who empowers organizations to thrive through reliable, scalable, and secure technology solutions. When I’m not solving ICT challenges, I enjoy experimenting with new technologies, contributing to projects, and exploring creative ways to push systems to their best performance.
+          
+          
+            Skills
+            
+              AWS
+              Microsoft 365
+              Sophos
+              Python
+              Flask
+              Linux
+              Helpdesk support
+              CPanel
+              Bash
+              CCTV Systems
+              Git
+              Endpoint security
+              Wireshark
+              Jira Service Management
+              Windows Server
+              System migrations
+              Documentation
+              Policy enforcement
+              Fortinet
+              Terraform
+              pfSense
+              SQL
+              Asset management
+              AWS CLI
+              MikroTik
+              IDS/IPS basics
+              Active Directory
+              EDR
+            
+          
+        
+      
+    
+  
+
+  
+  
+    
+      Work Experience
+      
+        
+          ICT Officer - Malibu Pharmacy Ltd
+          May 2023 – Present
+          
+            Implemented Jira Service Management, reducing escalation time by 50% for internal IT support.
+            Developed ICT Asset Management System, improving asset tracking efficiency.
+            Implemented ISP failover on MikroTik, reducing downtime by 80%.
+            Upgraded IP CCTV infrastructure, cutting maintenance costs by 40%.
+            Led Microsoft 365 migration, optimizing DNS, access controls, and security.
+            Conducted cybersecurity training, boosting employee awareness.
+          
+        
+        
+          ICT Lead - Techsavvy Experts Ltd
+          Jul 2023 – Mar 2024
+          
+            Created and implemented a digital marketing strategy, increasing engagement by 40%.
+            Developed ICT security policies, reducing vulnerabilities.
+            Integrated Swift Payments API for secure online transactions.
+          
+        
+        
+          ICT Administrator - Darubini Sacco Society Ltd
+          Jul 2022 – Mar 2023
+          
+            Designed and launched company website to improve customer engagement.
+            Implemented office networking and VoIP services.
+            Led branding and marketing material design.
+          
+        
+        
+          ICT Administrator - FEP Sacco Society Ltd
+          Jul 2019 – May 2022
+          
+            Participated in Orbit-R core banking system implementation.
+            Applied network security policies, reducing incidents by 40%.
+            Managed Oracle SQL databases and Windows Server 2012 R2.
+            Designed and maintained network infrastructure.
+            Orbit-R core banking system administration.
+            Suse Linux server Administration.
+          
+        
+        
+          ICT Intern - KWFT Bank
+          Sep 2018 – Dec 2018
+          
+            Provided helpdesk support and performed system/software updates.
+          
+        
+        
+          ICT Intern - Kenya Institute of Curriculum Development
+          May 2014 – Aug 2014
+          Provided technical support and installed software.
+        
+      
+    
+  
+
+  
+  
+    
+      Certifications
+      
+        
+          AWS Certified Cloud Practitioner
+          Amazon Web Services
+        
+        
+          IBM SkillsBuild Cybersecurity Certificate
+          IBM
+        
+        
+          AI & Machine Learning Foundations
+          Amazon Web Services & Udacity
+        
+        
+          Kubernetes and Cloud Native Associate (KCNA)
+          Linux Foundation
+        
+        
+          ISC2 Certified in Cybersecurity (CC)
+          ISC2
+        
+        
+          Microsoft SC-900: Security, Compliance & Identity Fundamentals
+          Microsoft (In-progress)
+        
+        
+          Linux Foundation Certified System Administrator
+          Linux Foundation (In-progress)
+        
+      
+      
+        Verified credentials available on Credly.
+      
+    
+  
+
+  
+  
+    
+      Projects
+      
+        
+          Network Security Monitoring Lab
+          Built a SIEM using Elastic Stack to monitor network traffic and detect anomalies. Configured firewalls and analyzed logs to identify potential threats.
+          Technologies: Elastic Stack, Linux, iptables
+          View on GitHub
+        
+        
+          Kubernetes Cluster Deployment
+          Deployed a secure Kubernetes cluster on AWS, implementing role-based access control (RBAC) and network policies for enhanced security.
+          Technologies: Kubernetes, AWS, Docker
+          View on GitHub
+        
+      
+    
+  
+
+  
+  
+    
+      Resume
+      Download my full resume to learn more about my experience and qualifications.
+      Download Resume (PDF)
+    
+  
+
+  
+  
+    
+      Contact Me
+      
+        Interested in collaborating or have a question? Reach out to me!
+        
+          Email: jmuli866@gmail.com
+          LinkedIn: linkedin.com/in/john-muli
+          GitHub: github.com/mr-jmuli
+        
+      
+    
+  
+
+  
+  
+    © 2025 John Muli. All rights reserved.
+  
+
+  
     // Smooth scrolling for navbar links with error handling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
@@ -284,6 +386,5 @@
         }
       });
     });
-  </script>
-</body>
-</html>
+  
+

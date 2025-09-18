@@ -1,79 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Muli | Contact</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-gray-100 to-blue-50 min-h-screen font-sans text-gray-800">
-
-  <!-- Navigation Bar -->
-  <nav class="bg-blue-700 text-white shadow">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <a href="index.html"></a>
-        <ul class="flex space-x-4 text-sm font-medium">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="resume.html" class="hover:underline">Resume</a></li>
-          <li><a href="projects.html" class="hover:underline">Projects</a></li>
-          <li><a href="labs.html" class="hover:underline">Labs</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+<body class="dark-theme">
+    <!-- Sidebar Menu -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://via.placeholder.com/150x150?text=Your+Image" alt="Your Profile Image" class="profile-img">
+            <h2>Your Name</h2>
+            <p>Web Developer & Designer</p>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Works</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <header class="bg-blue-900 text-white shadow">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center space-x-4">
-      <img src="images/profile.jpg" alt="John Muli" class="h-20 w-20 rounded-full border-2 border-white">
-      <div>
-        <h1 class="text-xxl font-bold">John Muli</h1>
-        <p class="text-xl text-gray-300">Cybersecurity Enthusiast | Cloud & Network Security</p>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main -->
-  <main class="max-w-4xl mx-auto px-4 py-10">
-    <section class="text-center mb-10">
-      <h2 class="text-2xl font-bold mb-4">Get in Touch</h2>
-      <p class="text-lg text-gray-700">Feel free to reach out to me for collaborations, opportunities, or tech discussions.</p>
-    </section>
-
-    <section class="bg-white py-10 px-6 sm:px-10 lg:px-20 rounded shadow">
-      <form action="mailto:your.email@example.com" method="POST" enctype="text/plain" class="space-y-6">
-        <div>
-          <label class="block text-gray-700 font-semibold mb-1" for="name">Name</label>
-          <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <div class="theme-toggle">
+            <button id="themeBtn" class="theme-btn">🌙</button>
         </div>
+    </nav>
 
-        <div>
-          <label class="block text-gray-700 font-semibold mb-1" for="email">Email</label>
-          <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        </div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="contact-section">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="social-links">
+                        <h2>Connect With Me</h2>
+                        <div class="social-icons">
+                            <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+                            <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <div>
-          <label class="block text-gray-700 font-semibold mb-1" for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-        </div>
-
-        <button type="submit" class="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">Send Message</button>
-      </form>
-
-      <div class="mt-10 text-gray-700 text-sm">
-        <p>Email: <a href="mailto:your.email@example.com" class="text-blue-600 hover:underline">your.email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank" class="text-blue-600 hover:underline">github.com/yourusername</a></p>
-        <p>Credly: <a href="https://www.credly.com/users/john-muli.f829facd" target="_blank" class="text-blue-600 hover:underline">View Badges</a></p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    &copy; 2025 John Muli. All rights reserved.
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,89 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Muli | Projects</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Works</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-gray-100 to-blue-50 min-h-screen font-sans text-gray-800">
-
-  <!-- Navigation Bar -->
-  <nav class="bg-blue-700 text-white shadow">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <a href="index.html"></a>
-        <ul class="flex space-x-4 text-sm font-medium">
-          <li><a href="index.html" class="hover:underline">Home</a></li>
-          <li><a href="resume.html" class="hover:underline">Resume</a></li>
-          <li><a href="projects.html" class="hover:underline">Projects</a></li>
-          <li><a href="labs.html" class="hover:underline">Labs</a></li>
-          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+<body class="dark-theme">
+    <!-- Sidebar Menu -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://via.placeholder.com/150x150?text=Your+Image" alt="Your Profile Image" class="profile-img">
+            <h2>Your Name</h2>
+            <p>Web Developer & Designer</p>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link active">Works</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
+        <div class="theme-toggle">
+            <button id="themeBtn" class="theme-btn">🌙</button>
+        </div>
+    </nav>
 
-  <!-- Header -->
-  <header class="bg-blue-900 text-white shadow">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center space-x-4">
-      <img src="images/profile.jpg" alt="John Muli" class="h-20 w-20 rounded-full border-2 border-white">
-      <div>
-        <h1 class="text-xxl font-bold">John Muli</h1>
-        <p class="text-xl text-gray-300">Cybersecurity Enthusiast | Cloud & Network Security</p>
-      </div>
-    </div>
-  </header>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="works-section">
+            <div class="container">
+                <h1>My Works & Services</h1>
 
-  <!-- Main -->
-  <main class="max-w-5xl mx-auto px-4 py-10">
-    <section class="text-center">
-      <h2 class="text-2xl font-bold mb-4">My Projects</h2>
-      <p class="text-lg mb-6">A showcase of practical projects in cloud, cybersecurity, automation, and web development.</p>
-    </section>
+                <section class="projects">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1">
+                            <h3>Project One</h3>
+                            <p>A responsive e-commerce site built with React and Node.js.</p>
+                            <a href="#" class="project-link">View Details</a>
+                        </div>
+                        <div class="project-card">
+                            <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2">
+                            <h3>Project Two</h3>
+                            <p>Mobile app prototype using Figma and Flutter.</p>
+                            <a href="#" class="project-link">View Details</a>
+                        </div>
+                    </div>
+                </section>
 
-    <section class="bg-white py-10 px-6 sm:px-10 lg:px-20 rounded shadow space-y-6">
-      <div>
-        <h3 class="text-xl font-semibold text-blue-700">🔐 Secure File Backup to AWS</h3>
-        <p class="text-gray-700 mt-2">
-          A script-based system to automatically back up files from remote PCs to AWS S3 with versioning, SNS notifications for failures, and incremental backups.
-        </p>
-      </div>
+                <section class="labs">
+                    <h2>Labs & Experiments</h2>
+                    <div class="labs-grid">
+                        <div class="lab-item">
+                            <h3>AI Chatbot Lab</h3>
+                            <p>Exploring natural language processing with Python.</p>
+                        </div>
+                    </div>
+                </section>
 
-      <div>
-        <h3 class="text-xl font-semibold text-blue-700">🌐 Network Monitoring Dashboard</h3>
-        <p class="text-gray-700 mt-2">
-          A Linux-based project using Bash and Cron to monitor system resources, uptime, and log remote server availability with alerts.
-        </p>
-      </div>
+                <section class="services">
+                    <h2>Services I Offer</h2>
+                    <ul class="services-list">
+                        <li>Custom Web Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Consultation & Prototyping</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+    </main>
 
-      <div>
-        <h3 class="text-xl font-semibold text-blue-700">🔧 MikroTik Dual WAN Load Balancing</h3>
-        <p class="text-gray-700 mt-2">
-          Load balancing and automatic failover implementation using MikroTik RB750Gr3 routers across 20 branches, with network centralization to head office.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold text-blue-700">📊 Pharmacy Inventory System (SQL + AWS)</h3>
-        <p class="text-gray-700 mt-2">
-          An inventory and consumable management system with SQL analytics and AWS hosting for Malibu Pharmacy, featuring request approval workflows and reporting.
-        </p>
-      </div>
-
-      <div>
-        <h3 class="text-xl font-semibold text-blue-700">📡 Ubiquiti-Powered Estate WISP</h3>
-        <p class="text-gray-700 mt-2">
-          A proof-of-concept WISP project integrating Ubiquiti CPEs, estate-wide coverage, and automatic Wi-Fi login upon M-Pesa payment verification.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6">
-    &copy; 2025 John Muli. All rights reserved.
-  </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

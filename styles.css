@@ -93,7 +93,7 @@ body.light-theme .sidebar {
     color: #F5F7FA;
     text-decoration: none;
     transition: color 0.3s ease;
-    border-bottom: 1px solid transparent;
+   /* border-bottom: 1px solid transparent;*/
 }
 
 .nav-link:hover,
